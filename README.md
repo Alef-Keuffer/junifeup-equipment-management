@@ -1,6 +1,6 @@
 # Equipment Management System 💻
 
-![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
 ![Prisma](https://img.shields.io/badge/Prisma-6-blue?style=for-the-badge&logo=prisma)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
@@ -71,6 +71,9 @@ Instead of maintaining a separate backend Node.js server and a React frontend, b
 ├── equipment.db            # Pre-populated SQLite Database
 ├── schema.sql              # Database schema dump
 ├── seed.sql                # Initial mock data
+├── test_api.sh             # API testing script
+├── PRESENTATION.md         # Sprint meeting presentation notes
+├── submission-info.txt     # Submission instructions
 └── .env                    # Environment variables
 ```
 
@@ -81,10 +84,10 @@ The REST API provides endpoints to manage the equipment inventory under the `/ap
 | Method | Endpoint               | Description                                      | Body Requirements |
 | ------ | ---------------------- | ------------------------------------------------ | ----------------- |
 | `GET`  | `/api/equipment`       | Retrieves a list of all equipment.               | None              |
-| `GET`  | `/api/equipment/:id`   | Retrieves the details of a specific equipment.   | None              |
+| `GET`  | `/api/equipment/[id]`  | Retrieves the details of a specific equipment.   | None              |
 | `POST` | `/api/equipment`       | Creates a new piece of equipment.                | JSON object with `name`, `category`, `serial_number`, `status`, `location`, `purchase_date`. |
-| `PUT`  | `/api/equipment/:id`   | Updates an existing piece of equipment.          | JSON object with fields to update. |
-| `DELETE`| `/api/equipment/:id`  | Removes a piece of equipment from the inventory. | None              |
+| `PUT`  | `/api/equipment/[id]`  | Updates an existing piece of equipment.          | JSON object with fields to update. |
+| `DELETE`| `/api/equipment/[id]` | Removes a piece of equipment from the inventory. | None              |
 
 **Note on Constraints:** 
 - The `category` must be one of: `Laptop`, `Monitor`, `Smartphone`, `Tablet`, `Printer`, `Network Equipment`.

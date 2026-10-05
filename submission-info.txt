@@ -1,0 +1,13 @@
+Equipment Management System - Phase 2 Technical Problem
+Candidate: Alef Keuffer
+
+To ensure access to the most up-to-date and complete version of my solution, including the full commit history and documentation, I have hosted the project on GitHub.
+
+https://github.com/Alef-Keuffer/junifeup-equipment-management
+
+How to review:
+1. Clone the repository using the URL above.
+2. Follow the instructions in the README.md to install dependencies and run the project.
+3. Review the PRESENTATION.md for an overview of architectural decisions.
+
+Thank you!
